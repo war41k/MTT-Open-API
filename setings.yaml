@@ -1,3 +1,6 @@
 exchanges:
   system:
     brauser_name: firefox
+  mtt:
+    client_id: @@@@@@@
+    redirect_uri: @@@@@@@@@

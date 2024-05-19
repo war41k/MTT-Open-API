@@ -11,7 +11,7 @@ from selenium.webdriver import Firefox
 from selenium.webdriver.firefox.options import Options as FireFox_Options
 
 
-import sysos
+import moduls.sysos as sysos
 
 
 
@@ -105,7 +105,7 @@ class Parser:
         self.platform = system.getplatform()
             
         self.list_user_agents = self.get_list_user_agents()
-        brouser = brauser(brauser_name, self.list_user_agents)        
+        brouser = brauser(brauser_name)        
 
         self.walker = brouser.walker
      
@@ -210,6 +210,3 @@ class Parser:
         headers = dict([header.split(": ", 1) for header in headers])
 
         return headers    
-
-p = Parser("firefox")
-p.walker.get("https://google.com")
