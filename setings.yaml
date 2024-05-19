@@ -2,5 +2,5 @@ exchanges:
   system:
     brauser_name: firefox
   mtt:
-    client_id: 5555
+    client_id: 7777
     redirect_uri: @@@@@@@@@
