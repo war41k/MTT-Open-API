@@ -4,7 +4,7 @@ import time
 import time
 
 from selenium.webdriver.support import expected_conditions as ec
-from selenium.webdriver.support.ui import WebDriverWait
+#from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.firefox.service import Service
 from selenium.webdriver.firefox.firefox_profile import FirefoxProfile
 from selenium.webdriver import Firefox
@@ -125,9 +125,14 @@ class Parser:
             else:
                 return 'geckodriver'        
        
+    def find(self, by, value_search,  driver):
+        
+        """Ищет элемент в дом  """
+        return driver.find_element(by, value_search)
 
-    def find(self, by, value_search,  driver, timewait=10, format="element_to_be_clickable"):
-        """Ищет элемент по условию задержки
+    def findFrame(self, by, value_search,  driver, timewait=10, format="element_to_be_clickable"):
+        """ Окно генерирующеся со временем 
+        Ищет элемент по условию задержки
         :by: selenium.webdriver.common.by
         :value_search: Значение для поска
         :timewait: Задержка в секундах
